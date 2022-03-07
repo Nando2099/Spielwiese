@@ -40,35 +40,34 @@ public class Main {
 	
 	
 		public static void leseDateiAnUndZeigeSieAn(ArrayList<String> etwas ) throws FileNotFoundException{
-			System.out.println(etwas);
+			// System.out.println(etwas); hasta aqui ok
 			
 			String str = "";
 			
 			for (String s : etwas) {
 			    str+= s;
-			    str+= "\t";
+			    //str+= "\t";
 			}
 			
-			System.out.println(str);// hasta aaqui ok
+			//System.out.println(str);// hasta aaqui ok
 			
 			
 			File file = new File(str);
 			
-			//try {
+			try {
 				Scanner scan = new Scanner(file);
 			
 				while(scan.hasNextLine()) {   // <<<------solange es eine weitere Zeile gibt dann..
 				System.out.println(scan.nextLine());
-			
-//			}catch(FileNotFoundException e) {
-//				System.out.println("Catch");
-//				System.out.println(e.getMessage());
-//			}
-// ************	
+				}
+			}catch(FileNotFoundException e) {
+				System.out.println("Catch");
+				System.out.println(e.getMessage());
+			}
+
 	
-		}
+		
 		
 	}
-
-		
 }
+		
