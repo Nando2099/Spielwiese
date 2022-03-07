@@ -1,0 +1,3 @@
+Este es el texto guardado en el txt
+esta es la segunda linea de texto
+y esta es la tercera
