@@ -27,15 +27,18 @@ public class Main {
 		etwas.add(dateiadresse);
 		etwas2.add(dateiadresse2);
 		
+
 		
 		leseDateiAnUndZeigeSieAn(etwas);
-		leseDateiAnUndZeigeSieAn(etwas2);
+		leseDateiAnUndZeigeSieAn(etwas2);  // 1.- el valor de retorno "ArrayListreturn" de leseDatei... se guarda aqui
+		
+
 		
 //		zeigeListeAn(etwas);
 //		zeigeListeAn(etwas2);
 		
 		zeigeListeAn(leseDateiAnUndZeigeSieAn(etwas));
-		zeigeListeAn(leseDateiAnUndZeigeSieAn(etwas2));   // <<<<-- OJO !!!
+		zeigeListeAn(leseDateiAnUndZeigeSieAn(etwas2));   // 2.- !! y ese valor se puede enviar a zeigeListeAn para procesamiento
 		
 //		/System.out.println(zeigeListeAn());
 		
