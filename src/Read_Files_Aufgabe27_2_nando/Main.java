@@ -3,7 +3,6 @@ package Read_Files_Aufgabe27_2_nando;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 // public - it can be called from anywhere
