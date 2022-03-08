@@ -31,39 +31,61 @@ public class Main {
 		leseDateiAnUndZeigeSieAn(etwas);
 		leseDateiAnUndZeigeSieAn(etwas2);
 		
-
+//		zeigeListeAn(etwas);
+//		zeigeListeAn(etwas2);
+		
+		zeigeListeAn(leseDateiAnUndZeigeSieAn(etwas));
+		zeigeListeAn(leseDateiAnUndZeigeSieAn(etwas2));   // <<<<-- OJO !!!
+		
+//		/System.out.println(zeigeListeAn());
+		
 	}
 
 	
 			// METODO 
 	
 	
-		public static void leseDateiAnUndZeigeSieAn(ArrayList<String> etwas ) throws FileNotFoundException{
+		public static ArrayList<String> leseDateiAnUndZeigeSieAn(ArrayList<String> IO ) throws FileNotFoundException{
 			// System.out.println(etwas); hasta aqui ok
 			
+			ArrayList<String> ArrayListreturn = new ArrayList<>();
 			String str = "";
+			String str2 = "";
 			
-			for (String s : etwas) {
+			for (String s : IO) {
 			    str+= s;
 			    
 			}
 			
 			//System.out.println(str);// hasta aaqui ok
-			
-			
 			File file = new File(str);
 			
 			try {
 				Scanner scan = new Scanner(file);
 			
 				while(scan.hasNextLine()){   // <<<------solange es eine weitere Zeile gibt dann..
-				System.out.println(scan.nextLine());
+				//System.out.println(scan.nextLine());  << -- imrpime el String
+				str2 = scan.nextLine();
+				ArrayListreturn.add(str2);
+				
+				
 				}
+				
 			}catch(FileNotFoundException e) {
 				System.out.println("Catch");
 				System.out.println(e.getMessage());
 			}
-
+			//System.out.println(ArrayListreturn);   <<<- iprime el ArrayListreturn
+			return ArrayListreturn;
+			
+		}
+		
+		
+		
+		public static void zeigeListeAn(ArrayList<String> etwas ) {
+			
+			System.out.println(etwas);
+			
 		}
 		
 		
