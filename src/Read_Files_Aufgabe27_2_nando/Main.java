@@ -46,7 +46,7 @@ public class Main {
 			
 			for (String s : etwas) {
 			    str+= s;
-			    //str+= "\t";
+			    
 			}
 			
 			//System.out.println(str);// hasta aaqui ok
@@ -65,9 +65,9 @@ public class Main {
 				System.out.println(e.getMessage());
 			}
 
-	
+		}
 		
 		
-	}
+		
 }
 		
