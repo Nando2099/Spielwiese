@@ -38,6 +38,8 @@ class DatenDatei{
 	private String dateiname;
 	private ArrayList<String> liste;
 	
+	// ArrayList<String> liste1 = new ArrayList<>();
+	
 	// Methods
 	
 	// Konstrukto(ren)
