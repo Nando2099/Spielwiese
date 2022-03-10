@@ -9,9 +9,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	/**
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
 
 		DatenDatei datei1 = new DatenDatei("src/Read_Files_Aufgabe27_3/text1.txt");
@@ -23,73 +21,56 @@ public class Main {
 		datei1.datenDateiAnzeigen();
 		
 		ArrayList<String> liste1= datei1.getListe();
-		liste1.add("hallo"); // versuchen die interne Liste der Klasse zu verändern!
+		liste1.add("hallo"); 
+		System.out.println(liste1);
 		
-		// klappte nicht, das Geheimnis liegt im Getter für die liste! siehe unten!
 		datei1.datenDateiAnzeigen();
 		
-		
-	
 	}
 }
+
+
+
 
 class DatenDatei{
 	// Fields
 	private String dateiname;
 	private ArrayList<String> liste;
 	
-	// ArrayList<String> liste1 = new ArrayList<>();
+
 	
-	// Methods
 	
-	// Konstrukto(ren)
+													// CONSTRUCTOR
 	public DatenDatei(String dateiname) {
 		this.dateiname = dateiname;
 		this.liste = new ArrayList<>();
 		
-		this.datenDateiEinlesen();
+		datenDateiEinlesen();
 	}
 	
-	// Getter / Setter
-	/**
-	 * @return the dateiname
-	 */
+
+	
+
+	
 	public String getDateiname() {
 		return dateiname;
 	}
 
-	/**
-	 * @param dateiname the dateiname to set
-	 */
-	/*
-	 * Der Setter für den Dateinamen macht keinen Sinn ohne die Liste neu zu laden,
-	 * was aber nicht über den Namen der Methode verständlich wäre
-	 * 
-	public void setDateiname(String dateiname) {
-		this.dateiname = dateiname;
-	}*/ 
 
-	/**
-	 * @return the liste
-	 */
+	
+	
+	
 	public ArrayList<String> getListe() {
-		// eine Kopie der Liste zurückgeben, sonst kann diese auf Grund des Referenzprinzipes ausserhalb des
-		// Geltungsbereichs der Klasse(Scope) geändert werden!
-		
+
 		ArrayList<String> kopierteListe = new ArrayList<>(liste);
 		
 		return kopierteListe;
 	}
 
-	/**
-	 * @param liste the liste to set
-	 */
-	/* Der Setter für die Liste macht keinen Sinn, mann könnte meinen die Daten würden in die DAtei zurückgeschrieben,
-	 * was aber nicht der Fall ist!
-	 * public void setListe(ArrayList<String> liste) {
-		this.liste = liste;
-	}
-	*/
+	
+	
+	
+	
 	
 	// andere Methoden
 	public void datenDateiEinlesen() {
@@ -119,6 +100,10 @@ class DatenDatei{
 		
 	}
 
+	
+	
+	
+	
 	public void datenDateiAnzeigen() {
 
 		// Alle Zeilen anzeigen

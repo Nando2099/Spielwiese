@@ -64,7 +64,11 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	    myStaticMethodWithParameters("Pedro");  							// call the STATIC METHOD WITH PARAMETERS
 	    
 	    
-	    myStaticIntMethodWithParameters(99);
+	    myStaticIntMethodWithParameters(99);								// se puede enviar al metodo para impr o return
+	    
+	    int y = 0;
+	    y = myStaticIntMethodWithParameters(99);							// se puede enviar y el resultado que bota el met se guarda en "y"
+	    
 	    System.out.println(myStaticIntMethodWithParameters(101));			//*** no hay que usar un objeto!
 	    
 	    
@@ -83,6 +87,9 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	    myObj3.myPublicIntMethodWithParameters(555);
 	    System.out.println(myObj3.myPublicIntMethodWithParameters(777));  	// *** hay que usar el objeto myOjb3 !
 	    
+	    
+	    
+	    
 	  }
 	}
 
@@ -94,5 +101,5 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 			// PUBLIC NECESITA UN OBJETO PARA SER LLAMADO -> myObj3.myPublicIntMethodWithParameters(555);
 			// STATIC NO NECESITA UN OBJETO PARA SER LLAMADO -> myStaticIntMethodWithParameters(99);
 
-			// METODOS CON VOID NO NECESITA UN RETURN 
+			// METODOS CON VOID NO NECESITA UN RETURN . METODO VOID NO RETORNA NADA!
 			// METODOS SIN VOID NECESITAN UN RETURN
