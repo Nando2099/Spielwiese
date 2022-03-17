@@ -20,7 +20,7 @@ public class sparbuch extends konto{
 		double Zinsen;
 		
 		Zinsen = (super.getSaldo() * zinssatz * 365) / 36000;
-		System.out.println(Zinsen);
+		
 		return Zinsen;
 	}
 
