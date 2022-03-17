@@ -2,8 +2,8 @@ package Acceder_Metodos;
 
 public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	
-	
-	
+		static String Pepito;
+		String Jorge;
 	
 	  // STATIC VOID METHOD
 	  static void myStaticMethod() {
@@ -16,6 +16,10 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	  static void myStaticMethodWithParameters(String name) {
 		  
 		  System.out.println(name);
+		  Pepito = "frfr";          // <- Ich kann aus der static methode auf statische attr. zugreifen
+		  Main.Pepito = "fefe";		// <- Ich kann aus der static methode auf statische attr. zugreifen
+		  
+		  //Jorge = "vsvs";			// <- Ich kann aus der static methode NICHT auf statische attr. zugreifen
 	  }
 	  
 	  
@@ -34,6 +38,10 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	  // PUBLIC VOID METHOD
 	  public void myPublicMethod() {
 	    System.out.println("Public methods must be called by creating objects");
+	    Main.Pepito = "ww"; 		// <- Ich kann aus der PUBLIC methode auf statische attr. zugreifen
+	    Pepito = "xaxa";			// <- Ich kann aus der PUBLIC methode auf statische attr. zugreifen
+	    
+	    Jorge = "xyxy";				// <- ich kann aus der PUBLIC methode auf NICHT statische attr. zugreifen
 	  }
 	  
 	  
@@ -56,6 +64,7 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	  // MAIN METHOD
 	  public static void main(String[] args) {
 		  
+		  // ++++++++++++ STATIC METHODS +++++++++++
 		  
 	    myStaticMethod(); 													// Call the STATIC method
 	    // myPublicMethod(); This would compile an error
@@ -65,6 +74,8 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	    
 	    
 	    myStaticIntMethodWithParameters(99);								// se puede enviar al metodo para impr o return
+	    Main.myStaticIntMethodWithParameters(8);
+	    																	
 	    
 	    int y = 0;
 	    y = myStaticIntMethodWithParameters(99);							// se puede enviar y el resultado que bota el met se guarda en "y"
@@ -73,6 +84,8 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	    
 	    
 	    
+	    
+	    // +++++++++++++++PUBLIC METHODS +++++++++++++
 	    
 	    
 	    Main myObj = new Main(); // Create an object of Main
@@ -87,8 +100,8 @@ public class Main { // 					LLAMAR METODOS ESTATICOS Y PUBLICOS
 	    myObj3.myPublicIntMethodWithParameters(555);
 	    System.out.println(myObj3.myPublicIntMethodWithParameters(777));  	// *** hay que usar el objeto myOjb3 !
 	    
-	    
-	    
+	    myObj.Jorge = "dada";  // objeto de la clase Main puede cambiar el atributo no estatico
+	    Main.Pepito = "dudu"; // aqui hay que llamar a la clase Main y a su atributo estatico para cambiarlo
 	    
 	  }
 	}

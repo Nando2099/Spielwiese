@@ -40,6 +40,7 @@ public class Main {
 
 		// einzelne Zeile ausgeben
 		datei2.datenDateiAnzeigen(1);
+		System.out.println("***");
 
 		// einzelne Zelle einer Zeile ausgeben
 		datei2.datenDateiAnzeigen(1, 0);
@@ -70,47 +71,21 @@ class DatenDatei {
 		this.datenDateiEinlesen();
 	}
 
-	// Getter / Setter
-	/**
-	 * @return the dateiname
-	 */
+
 	public String getDateiname() {
 		return dateiname;
 	}
 
-	/**
-	 * @param dateiname the dateiname to set
-	 */
-	/*
-	 * Der Setter für den Dateinamen macht keinen Sinn ohne die Liste neu zu laden,
-	 * was aber nicht über den Namen der Methode verständlich wäre
-	 * 
-	 * public void setDateiname(String dateiname) { this.dateiname = dateiname; }
-	 */
 
-	/**
-	 * @return the liste
-	 */
 	public ArrayList<String> getListe() {
-		// eine Kopie der Liste zurückgeben, sonst kann diese auf Grund des
-		// Referenzprinzipes ausserhalb des
-		// Geltungsbereichs der Klasse(Scope) geändert werden!
+	
 
 		ArrayList<String> kopierteListe = new ArrayList<>(liste);
 
 		return kopierteListe;
 	}
 
-	/**
-	 * @param liste the liste to set
-	 */
-	/*
-	 * Der Setter für die Liste macht keinen Sinn, mann könnte meinen die Daten
-	 * würden in die DAtei zurückgeschrieben, was aber nicht der Fall ist! public
-	 * void setListe(ArrayList<String> liste) { this.liste = liste; }
-	 */
-
-	// andere Methoden
+	
 	public void datenDateiEinlesen() {
 
 		File f = new File(dateiname);
