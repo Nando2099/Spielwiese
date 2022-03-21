@@ -63,7 +63,7 @@ public class konto {
 		sb1.zahleGeldEin(2000);
 		sb1.hebeGeldAb(199);
 		double z = sb1.getSaldo();
-		System.out.println(z);  // correcto
+		System.out.println("Aktueller Saldo " + z);  // correcto
 		//System.out.println(sb1.getSaldo()); // <- tambien asi se puede
 		System.out.println("Zinsen basierend auf aktuellem Saldo: " + sb1.berechneZinsenJahr());
 		
