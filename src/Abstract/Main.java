@@ -1,3 +1,5 @@
+
+
 package Abstract;
 
 //abstract class
@@ -17,5 +19,7 @@ class Student extends Main {
 
 		System.out.println("Studying all day long");
 		
+
+		
 	}
-}
+} 
