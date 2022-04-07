@@ -1,6 +1,6 @@
 package Arrays;
 
-
+//comment
 class AnonymeArrayTest {
 
       //-------- test content -------------------------
