@@ -2,6 +2,8 @@ package Arrays;
 
 //comment
 class AnonymeArrayTest {
+	
+	//comentario
 
       //-------- test content -------------------------
       static void printArray(int... a) {

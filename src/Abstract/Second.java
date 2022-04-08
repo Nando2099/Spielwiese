@@ -10,5 +10,8 @@ class Second {
 	    System.out.println("Graduation Year: " + myObj.graduationYear);
 	    myObj.study(); // call abstract method
 	    
+
+	    
+	    
 	  }
 }
