@@ -3,7 +3,7 @@ package Arrays;
 //comment
 class AnonymeArrayTest {
 	
-	//comentario
+	//comentario...
 
       //-------- test content -------------------------
       static void printArray(int... a) {
